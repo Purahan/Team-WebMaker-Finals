@@ -689,6 +689,23 @@
   .feature__paragraph {
     color: var(--clr-lightGray);
   }
+
+@media screen and (max-width:534px){
+  .feature__icon-wrapper {
+    margin-left: 43%;
+    margin-right: 50%;
+  }
+  .features__text {
+    margin-left: 15%;
+    text-align: center;
+  }
+  .feature__title {
+    text-align: center;
+  }
+  .feature__paragraph {
+    text-align: center;
+  }
+}
   
   
   /* Testimonial */
