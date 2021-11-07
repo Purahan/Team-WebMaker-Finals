@@ -54,7 +54,7 @@
               <img class="d-block" src="<?=$pic?>" id="profile-pic-img" width="110" />
             </div>
             <div class="ps-sm-3 text-center text-sm-start">
-              <label for="profile-pic" class="btn btn-light shadow btn-sm mb-2"><i class="bi bi-arrow-repeat"></i>Change avatar</label>
+              <label for="profile-pic" class="btn btn-light shadow btn-sm mb-2"><i class="bi bi-arrow-repeat"></i> Change avatar</label>
               <input type="file" name="profile-pic" id="profile-pic" class="invisible" accept="image/*" onchange="img_changed()">
               <div class="p mb-0 fs-ms text-muted">Upload JPG, GIF or PNG image. 300 x 300 required.</div>
             </div>
@@ -122,7 +122,7 @@
                 <div class="form-check d-block">
                   
                 </div>
-                <button class="btn btn-primary mx-md-5 mx-0 mt-3 mt-sm-0" type="submit">
+                <button class="btn btn-blue mx-md-5 mx-0 mt-3 mt-sm-0" type="submit">
                   <i class="far fa-save fs-4 me-2"></i>Save changes
                 </button>
               </div>

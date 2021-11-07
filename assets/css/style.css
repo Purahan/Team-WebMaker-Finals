@@ -1072,3 +1072,13 @@ hr {
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
 }
+
+.btn-blue {
+  background-color: #99CCFF;
+  border: 2px solid #99CCFF;
+}
+
+.btn-blue:hover {
+  background-color: #99ccff00;
+  transition: 0.8s;
+}
