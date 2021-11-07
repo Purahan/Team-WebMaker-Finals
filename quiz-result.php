@@ -2,10 +2,6 @@
   include('includes/functions.php');
   $previous_question='';
   $next_question='';
-
-  if(isset($_REQUEST['id']) && isset($_SESSION['id'])) {
-    $conn->query("INSERT INTO `user_experiments` (user_id, experiment_id, type, created_on) VALUES ('".$_SESSION['id']."', '".$_REQUEST['id']."', 'Q', NOW())");
-  }
   if(isset($_REQUEST['id'])) {
     $quiz_result = $conn->query("SELECT * FROM `quiz_result` WHERE `experiment_id`='".$_REQUEST['id']."' AND user_id='".$_SESSION['id']."'");
     if($quiz_result->num_rows > 0) {

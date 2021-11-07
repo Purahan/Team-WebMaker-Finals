@@ -30,6 +30,7 @@
                 $expStatus = 'You have not completed this experiment';
                 $quizBadge = 'bg-light text-secondary';
                 $quizStatus = 'You have not completed this quiz';
+                $quizResultLink = '#';
                 while($user_experiment_row = $user_experiment_result->fetch_assoc()) {
                   $created_on_date = new DateTime($user_experiment_row['created_on']);
                   $formattedDate = $created_on_date->format('F j, Y');
@@ -42,6 +43,7 @@
                   } else if($user_experiment_row['type'] == 'Q') {
                     $quizBadge = 'bg-success';
                     $quizStatus = 'You completed this quiz on '.$formattedDate;
+                    $quizResultLink = 'quiz-result.php?id='.$row["id"];
                   }
                 }
                 echo '
@@ -52,7 +54,7 @@
                       <span class="mx-5">
                         <span class="badge rounded-pill '.$videoBadge.' tooltip-status" data-tippy-content="'.$videoStatus.'">Video</span>
                         <span class="badge rounded-pill '.$expBadge.' tooltip-status" data-tippy-content="'.$expStatus.'">Experiment</span>
-                        <a href="quiz-result.php?id='.$row["id"].'"><span class="badge rounded-pill '.$quizBadge.' tooltip-status" data-tippy-content="'.$quizStatus.'">Quiz</span></a>
+                        <a href="'.$quizResultLink.'"><span class="badge rounded-pill '.$quizBadge.' tooltip-status" data-tippy-content="'.$quizStatus.'">Quiz</span></a>
                       </span>
                     </button>
                   </h2>

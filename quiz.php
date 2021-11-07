@@ -99,8 +99,7 @@
                   while($answer = $answer_result->fetch_assoc()) {
                 ?>
                   <div class="ans ml-2 my-2">
-                      <label class="radio"> <input type="radio" name="answer" value="<?=$answer['id']?>"> <span><?=$answer['answer']?></span>
-                      </label>
+                      <label class="radio"> <input type="radio" name="answer" value="<?=$answer['id']?>"> <span><?=$answer['answer']?></span></label>
                   </div>
                 <?php
                   }
@@ -109,13 +108,11 @@
             </div>
             <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
               <?php if($previous_question) { ?>
-                <!-- <a href="quiz.php?id=<?=$_REQUEST['id']?>&q=<?=$previous_question?>"><button class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button></a> -->
                 <button class="btn btn-primary d-flex align-items-center btn-danger" type="submit" name="previous"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button>
               <?php } else {
                 echo '<span></span>';
               } ?>
               <?php if($next_question) { ?>
-                <!-- <a href="quiz.php?id=<?=$_REQUEST['id']?>&q=<?=$next_question?>"><button class="btn btn-primary border-success align-items-center btn-success" type="button">Next <i class="fa fa-angle-right ml-2"></i></button></a> -->
                 <button class="btn btn-primary border-success align-items-center btn-success" type="submit" name="next">Next <i class="fa fa-angle-right ml-2"></i></button>
               <?php } else { ?>
                 <button class="btn btn-primary border-success align-items-center btn-success" type="submit" name="submit">Submit</button>
