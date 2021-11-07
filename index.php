@@ -1,7 +1,6 @@
 <?php
   include('includes/functions.php');
   if(!empty($_POST)) {
-    if (strpos($_SERVER["SCRIPT_FILENAME"], 'index.php') !== false) {
       if ($_POST['type'] == "login") {
         // Check connection
         if ($conn->connect_error) {
@@ -54,7 +53,6 @@
             header("Location: list.php");
           }
       }
-    }
   }
   
   page_header();

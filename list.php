@@ -52,7 +52,7 @@
                       <span class="mx-5">
                         <span class="badge rounded-pill '.$videoBadge.' tooltip-status" data-tippy-content="'.$videoStatus.'">Video</span>
                         <span class="badge rounded-pill '.$expBadge.' tooltip-status" data-tippy-content="'.$expStatus.'">Experiment</span>
-                        <span class="badge rounded-pill '.$quizBadge.' tooltip-status" data-tippy-content="'.$quizStatus.'">Quiz</span>
+                        <a href="quiz-result.php?id='.$row["id"].'"><span class="badge rounded-pill '.$quizBadge.' tooltip-status" data-tippy-content="'.$quizStatus.'">Quiz</span></a>
                       </span>
                     </button>
                   </h2>
@@ -64,6 +64,7 @@
                           <td><a href="#"><button type="button" class="btn mx-1 btn-outline-primary tooltip-file"><i class="bi bi-file-earmark-text"></i></button></a></td>
                           <td><a href="watch.php?id='.$row["id"].'&v='.$row["video"].'"><button type="button" class="btn mx-1 btn-outline-danger tooltip-video"><i class="bi bi-youtube"></i></button></a></td>
                           <td><a href="perform.php?id='.$row["id"].'&expo='.$row["perform"].'"><button type="button" class="btn mx-1 btn-outline-success tooltip-experiment"><i class="bi bi-cursor-fill"></i></button></a></td>
+                          <td><a href="quiz.php?id='.$row["id"].'&q=1"><button type="button" class="btn mx-1 btn-outline-danger tooltip-quiz"><i class="bi bi-alarm"></i></button></a></td>
                         </tr>
                       </table>
                     </div>
@@ -85,6 +86,9 @@
   });
   tippy('.tooltip-experiment', {
     content: 'Try this experiment in virtual lab',
+  });
+  tippy('.tooltip-quiz', {
+    content: 'Test you knowledge with quiz',
   });
   tippy('.tooltip-status', {arrow: true,});
 </script>
