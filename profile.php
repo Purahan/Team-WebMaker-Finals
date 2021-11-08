@@ -1,7 +1,9 @@
 <?php
   include('includes/functions.php');
-    
-  $pic_location = $_SESSION['pic'];
+  
+  if(isset($_SESSION['pic'])) {
+    $pic_location = $_SESSION['pic'];
+  }
   if(!empty($_POST)) {
     if (isset($_FILES['profile-pic']) && $_FILES['profile-pic']['name'] != '') {
       $arrFileName=explode('.',$_FILES['profile-pic']['name']);

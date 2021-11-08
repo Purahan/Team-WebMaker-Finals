@@ -9,7 +9,8 @@
         </div>
         <div class="modal-body pt-3">
             <p class="fs-ms modal-p" style="color: #9e9fb4 !important;">Sign in to your account using email and password provided during registration.</p>
-            <form class="needs-validation mb-4" action="#" method="post" >
+            <div class="error-message-login alert alert-danger" role="alert" style="display: none;"></div>
+            <form id="login-form" class="needs-validation mb-4" action="#" method="post" >
                 <?php if(!empty($error)) { ?>						
                     <div class="error alert alert-danger">
                         <i class="bi bi-exclamation-triangle"></i>
@@ -48,4 +49,24 @@
       </div>
     </div>
 </div>
-  
+<script>
+    $("#login-form").submit(function(e) {
+        e.preventDefault();
+        $('.error-message-login').hide();
+        var form = $(this);
+        $.ajax({
+            type: "POST",
+            url: 'script.php',
+            data: form.serialize(), // serializes the form's elements.
+            dataType: "json",
+            success: function(data) {
+                if(data.status == 'success') {
+                    location.reload();
+                } else {
+                    $('.error-message-login').html(data.message);
+                    $('.error-message-login').show();
+                }
+            }
+        });
+    });
+</script>
