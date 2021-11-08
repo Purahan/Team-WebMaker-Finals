@@ -1082,3 +1082,7 @@ hr {
   background-color: #99ccff00;
   transition: 0.8s;
 }
+
+.bg-white {
+  background-color: #fff;
+}

@@ -63,7 +63,7 @@
                       <table style="width: 100%;">
                         <tr>
                           <td style="width: 90%;">'.$row["aim"].'</td>
-                          <td><a href="#"><button type="button" class="btn mx-1 btn-outline-primary tooltip-file"><i class="bi bi-file-earmark-text"></i></button></a></td>
+                          <td><a href="doc.php?id='.$row["id"].'"><button type="button" class="btn mx-1 btn-outline-primary tooltip-file"><i class="bi bi-file-earmark-text"></i></button></a></td>
                           <td><a href="watch.php?id='.$row["id"].'&v='.$row["video"].'"><button type="button" class="btn mx-1 btn-outline-danger tooltip-video"><i class="bi bi-youtube"></i></button></a></td>
                           <td><a href="perform.php?id='.$row["id"].'&expo='.$row["perform"].'"><button type="button" class="btn mx-1 btn-outline-success tooltip-experiment"><i class="bi bi-cursor-fill"></i></button></a></td>
                           <td><a href="quiz.php?id='.$row["id"].'&q=1"><button type="button" class="btn mx-1 btn-outline-danger tooltip-quiz"><i class="bi bi-alarm"></i></button></a></td>

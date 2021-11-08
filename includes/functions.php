@@ -34,7 +34,7 @@ function page_footer($showLinks=true) {
 ?>
         <!-- Footer (: -->
         <?php if($showLinks) { ?>
-        <footer class="footer">
+        <footer class="footer border-top border-2">
             <div class="footer__container container container--px flex">
             <div class="footer__header flex">
                 <a href="#" class="footer__brand" title="Back to the homepage">Experimento</a>
@@ -177,6 +177,9 @@ function nav_bar($showBackButton=false) {
                     </li>
                     <li class="menu__item" role="none">
                         <a href="<?=$homeFile?>#testimonial" class="menu__link" role="menuitem">Testimonials</a>
+                    </li>
+                    <li class="menu__item" role="none">
+                        <a href="<?=$homeFile?>#support" class="menu__link" role="menuitem">Support</a>
                     </li>
                     <?php
                         if(!isset($_SESSION['id'])){
