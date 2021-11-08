@@ -125,9 +125,11 @@ function page_footer($showLinks=true) {
 
         <!-- JQUERY JS File -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+        <?php    
+        if(strpos($_SERVER["SCRIPT_FILENAME"], 'index.php') !== false) {?>
         <!-- Theme JS File -->
         <script src="assets/js/script.js"></script>
+        <?php }?>
     </body>
 </html>
 <?php
