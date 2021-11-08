@@ -8,6 +8,9 @@ function page_header() {
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS file -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -44,87 +47,46 @@ function page_footer($showLinks=true) {
 ?>
         <!-- Footer (: -->
         <?php if($showLinks) { ?>
-        <footer class="footer border-top border-2">
-            <div class="footer__container container container--px flex">
-            <div class="footer__header flex">
-                <a href="#" class="footer__brand" title="Back to the homepage">Experimento</a>
-    
-                <div class="footer__social-icons social-icons flex">
-                
-                <a href="#" class="social-icons__link social-icons__link--facebook">
-                    <i class='bi bi-facebook'></i>
-                    <span class="visually-hidden">Facebook</span>
-                </a>
-                <a href="#" class="social-icons__link social-icons__link--twitter">
-                    <i class='bx bxl-twitter' ></i>
-                    <span class="visually-hidden">Twitter</span>
-                </a>
-                <a href="#" class="social-icons__link social-icons__link--youtube">
-                    <i class='bx bxl-youtube' ></i>
-                    <span class="visually-hidden">YouTube</span>
-                </a>
+            <footer class="page-footer font-small cyan darken-3">
+
+                <!-- Footer Elements -->
+                <div class="container">
+
+                    <!-- Grid row-->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-12 py-5">
+                            <div class="mb-1 flex-center text-center">
+                                <!-- Facebook -->
+                                <a class="fb-ic">
+                                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                </a>
+                                <!-- Twitter -->
+                                <a class="tw-ic">
+                                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                </a>
+                                <!--Youtube-->
+                                <a class="pin-ic">
+                                    <i class="fab fa-youtube fa-lg white-text fa-2x"> </i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row-->
+
                 </div>
-            </div>
-    
-            <nav class="footer__inner flex">
-                <ul class="footer__list list" role="menu">
-                <h3 class="list__title">Something</h3>
-        
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                </ul>
-                <ul class="footer__list list" role="menu">
-                <h3 class="list__title">Something</h3>
-        
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                </ul>
-                <ul class="footer__list list" role="menu">
-                <h3 class="list__title">Something</h3>
-        
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                </ul>
-                <ul class="footer__list list" role="menu">
-                <h3 class="list__title">Something</h3>
-        
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                <li class="list__item" role="none">
-                    <a href="#" class="list__link" role="menuitem">Something</a>
-                </li>
-                </ul>
-            </nav>      
-            </div>
-        </footer>
+                <!-- Footer Elements -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2021 Copyright:
+                    <a href="http://experimento.teamforwork.com/"> Experimento</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
         <?php } ?>
         <?php
         if(strpos($_SERVER["SCRIPT_FILENAME"], 'index.php') !== false) {?>
