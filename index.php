@@ -233,7 +233,7 @@
   
             <div class="member__info">
               <h3 class="member__title">Purahan Gupta</h3>
-              <span class="member__designation">Something</span>
+              <span class="member__designation">Manager, Frontend Handler, Backend Handler, Made experiments, designed Profile page</span>
             </div>
           </div>
   
@@ -242,7 +242,7 @@
   
             <div class="member__info">
               <h3 class="member__title">Navjot Singh Aulakh</h3>
-              <span class="member__designation">Something</span>
+              <span class="member__designation">Frontend Handler, designed experiments list page</span>
             </div>
           </div>
   
@@ -251,7 +251,7 @@
   
             <div class="member__info">
               <h3 class="member__title">Rishabh Tandon</h3>
-              <span class="member__designation">Something</span>
+              <span class="member__designation">Manager, Frontend Handler, Made Experiments, designed home page</span>
             </div>
           </div>
         </div>
